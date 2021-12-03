@@ -21,6 +21,7 @@ export default function Layout({
         <meta charSet='utf-8' />
         <meta property='og:title' content={title} key='ogtitle' />
         <meta property='og:description' content={description} key='ogdesc' />
+        <meta property='keywords' content={keywords} key='keywords' />
         <title>{title}</title>
       </Head>
       <Navbar />

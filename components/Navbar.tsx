@@ -1,6 +1,9 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import styles from "../styles/Navbar.module.scss"
+
+import camelliaFlower from "../public/camellia-pin-drawing.png"
 
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false)
@@ -10,9 +13,9 @@ export default function Navbar() {
 
   return (
     <>
-      <button id='button' onClick={showNavbar}>
+      <button id='button' onClick={showNavbar} className={styles.openButton}>
         <Image
-          src='/camellia-pin-drawing.png'
+          src={camelliaFlower}
           alt='camellia flower drawing'
           width={50}
           height={50}
@@ -20,17 +23,17 @@ export default function Navbar() {
         />
       </button>
       <div style={navbar ? { display: "block" } : { display: "none" }}>
-        <nav>
-          <button onClick={showNavbar}>
+        <nav className={styles.nav}>
+          <button onClick={showNavbar} className={styles.closeButton}>
             <Image
-              src='/camellia-pin-drawing.png'
+              src={camelliaFlower}
               alt='camellia flower drawing'
               width={50}
               height={50}
               layout='fixed'
             />
           </button>
-          <div>
+          <div className={styles.navItems}>
             <Link href='/'>
               <a>Home</a>
             </Link>
