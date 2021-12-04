@@ -22,7 +22,7 @@ export default function Navbar() {
           layout='fixed'
         />
       </button>
-      <div style={navbar ? { display: "block" } : { display: "none" }}>
+      <div style={navbar ? { opacity: 1 } : { opacity: 0 }}>
         <nav className={styles.nav}>
           <button onClick={showNavbar} className={styles.closeButton}>
             <Image

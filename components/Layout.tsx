@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Navbar from "./Navbar"
 
-interface LayoutProps {
+interface ILayout {
   title: string
   keywords: string
   description: string
@@ -13,7 +13,7 @@ export default function Layout({
   keywords,
   description,
   children,
-}: LayoutProps) {
+}: ILayout) {
   return (
     <>
       <Head>
