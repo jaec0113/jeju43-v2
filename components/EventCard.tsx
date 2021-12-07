@@ -1,23 +1,17 @@
 import Link from "next/link"
-import Image from "next/image"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { IJeju43Fields } from "../@types/generated/contentful"
+import styles from "../styles/EventCard.module.scss"
 
-export default function BlogCard({  }) {
-  const { } = 
-
+export default function BlogCard({ jeju43Event }: IJeju43Fields) {
+  const { event, region, background } = jeju43Event.fields
   return (
-    <div>
-      <div>
-        <Image
-          src={}
-          width={250}
-          height={250}
-        />
+    <div className={styles.cardWrapper}>
+      <div className={styles.eventInfo}>
+        <h3>{event}</h3>
+        <h4>{region}</h4>
+        <div>{documentToReactComponents(background)}</div>
       </div>
-      <Link href={}>
-        <div >
-         
-        </div>
-      </Link>
     </div>
   )
 }
