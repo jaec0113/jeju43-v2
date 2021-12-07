@@ -5,6 +5,7 @@
 
 .eventList {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px 60px;
+  grid-template-columns: 40vw;
+  grid-row-gap: 1rem;
+  
 }

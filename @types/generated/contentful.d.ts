@@ -7,22 +7,31 @@ export interface IJeju43Fields {
   jeju43Event: any
 
   /** Event */
-  event?: string
+  event?: string | undefined
 
   /** region */
-  region?: string
+  region?: string | undefined
 
   /** slug */
-  slug?: string
+  slug?: string | undefined
 
   /** background */
-  background?: Document
+  background?: Document | undefined
 
   /** actors */
   actors?: Document | undefined
 
   /** story */
   story?: Document | undefined
+
+  /** eventImage */
+  eventImage?: Asset | undefined
+
+  /** date */
+  date?: string | undefined
+
+  /** image credit */
+  imageCredit?: string | undefined
 }
 
 /** Event pages for the Jeju 4-3 website */
