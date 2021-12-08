@@ -49,7 +49,7 @@ export default function EventStory({ jeju43Event }: IJeju43Fields) {
   // const {  } =
 
   return (
-    <Layout title={`${jeju43Event.event} | Jeju 4.3 Incident Website`}>
+    <Layout title={`${jeju43Event.fields.event} | Jeju 4.3 Incident Website`}>
       <Head>
         <meta
           name='keywords'
@@ -61,7 +61,7 @@ export default function EventStory({ jeju43Event }: IJeju43Fields) {
         />
       </Head>
       <div>{jeju43Event.fields.event}</div>
-      <div>{documentToReactComponents(jeju43Event.fields.background)}</div>
+      <div>{documentToReactComponents(jeju43Event.fields.story)}</div>
     </Layout>
   )
 }

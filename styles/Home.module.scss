@@ -1,11 +1,12 @@
-.title {
-  font-family: 'Nanum Brush Script', cursive;
-  background-color: green;
-}
-
 .eventList {
   display: grid;
   grid-template-columns: 40vw;
   grid-row-gap: 1rem;
-  
+  justify-content: space-evenly;
+  background: url('/drawing-bg.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
 }

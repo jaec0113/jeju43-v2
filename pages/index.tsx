@@ -33,10 +33,6 @@ export default function Index({ jeju43Events }: any) {
         <meta name='keywords' content='Jeju, 4.3, Incident, Timeline' />
         <meta name='descriptions' content='Jeju 4.3 Incident Timeline' />
       </Head>
-      <div className={styles.title}>
-        <h1>Jeju 4.3 Incident</h1>
-        <h2>제주 4.3 사건</h2>
-      </div>
       <div className={styles.eventList}>
         {jeju43Events.map((jeju43Event: IJeju43Fields) => (
           <EventCard key={uuidv4()} jeju43Event={jeju43Event} />

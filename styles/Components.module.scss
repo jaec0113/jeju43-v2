@@ -1,0 +1,93 @@
+$primary: rgb(7, 87, 7);
+$secondary: #222222;
+$highlight: rgb(253, 253, 86);
+
+// Buttons
+.navButton {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  right: 1rem;
+  top: 2rem;
+  background: transparent;
+  border: 0;
+  background-image: url(/camellia-pin-drawing.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 4rem;
+  aspect-ratio: 1;
+  z-index: 100;
+}
+
+// Navbar
+.nav {
+  background: $secondary;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: fixed;
+  flex-direction: column;
+  height: 100vh;
+  width: 50vw;
+  transition: transform 1000ms ease-in-out;
+  z-index: 50;
+}
+
+.navItems {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  justify-content: space-evenly;
+  height: 85%;
+  text-align: center;
+}
+
+.navItems a {
+  color: white;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+//Header
+.header {
+    font-family: 'Nanum Brush Script', cursive;
+    font-size: clamp(2rem, 5vw, 3rem);
+    background-color: $primary;
+    padding: 2rem;
+    text-align: center;
+}
+
+//Event Card
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50vw;
+  border-radius: .25rem;
+  box-shadow: 0 0 0 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.eventTitle {
+  font-size: clamp(1.15rem, 5vw, 1.25rem);
+  font-weight: 100;
+  margin: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.eventInfo {
+  font-size: clamp(.75rem, 5vw, 1rem);
+  font-weight: 100;
+  color: white;
+  padding: 1rem;
+}
+
+.eventLink {
+  color: $highlight;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 1rem;
+}
