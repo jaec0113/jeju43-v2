@@ -1,3 +1,5 @@
+$secondary: #1fa3fe;
+
 .openButton {
   background: none;
   border: none;
@@ -8,7 +10,7 @@
 }
 
 .nav {
-  background: rgb(90, 90, 90);
+  background: $secondary;
   height: 100vh;
   width: 25vw;
   display: flex;

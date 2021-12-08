@@ -6,7 +6,6 @@ import { v4 as uuidv4 } from "uuid"
 import EventCard from "../components/EventCard"
 import Layout from "../components/Layout"
 import styles from "../styles/Home.module.scss"
-import { randomUUID } from "crypto"
 
 export const getStaticProps: GetStaticProps = async () => {
   const client = createClient({
