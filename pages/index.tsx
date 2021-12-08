@@ -5,6 +5,7 @@ import { IJeju43Fields, IJeju43 } from "../@types/generated/contentful"
 import { v4 as uuidv4 } from "uuid"
 import EventCard from "../components/EventCard"
 import Layout from "../components/Layout"
+import Header from "../components/Header"
 import styles from "../styles/Home.module.scss"
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -33,6 +34,7 @@ export default function Index({ jeju43Events }: any) {
         <meta name='keywords' content='Jeju, 4.3, Incident, Timeline' />
         <meta name='descriptions' content='Jeju 4.3 Incident Timeline' />
       </Head>
+      <Header />
       <div className={styles.eventList}>
         {jeju43Events.map((jeju43Event: IJeju43Fields) => (
           <EventCard key={uuidv4()} jeju43Event={jeju43Event} />

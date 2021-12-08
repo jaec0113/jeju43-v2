@@ -9,6 +9,9 @@ export interface IJeju43Fields {
   /** Event */
   event?: string | undefined
 
+  // korTitle
+  korTitle?: string | undefined
+
   /** region */
   region?: string | undefined
 

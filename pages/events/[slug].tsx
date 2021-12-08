@@ -5,6 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { IJeju43Fields } from "../../@types/generated/contentful"
 import { ParsedUrlQuery } from "querystring"
 import Layout from "../../components/Layout"
+import Header from "../../components/Header"
 
 interface IParams extends ParsedUrlQuery {
   slug: string
@@ -49,7 +50,7 @@ export default function EventStory({ jeju43Event }: IJeju43Fields) {
   // const {  } =
 
   return (
-    <Layout title={`${jeju43Event.fields.event} | Jeju 4.3 Incident Website`}>
+    <Layout title={`${jeju43Event.fields.event}  | Jeju 4.3 Incident Website`}>
       <Head>
         <meta
           name='keywords'
@@ -60,6 +61,10 @@ export default function EventStory({ jeju43Event }: IJeju43Fields) {
           content={`Learn more about the history of the indcident that occurred during the Jeju 4.3 Incident.`}
         />
       </Head>
+      <Header
+        engTitle={`${jeju43Event.fields.event}`}
+        korTitle={`${jeju43Event.fields.korTitle}`}
+      />
       <div>{jeju43Event.fields.event}</div>
       <div>{documentToReactComponents(jeju43Event.fields.story)}</div>
     </Layout>
