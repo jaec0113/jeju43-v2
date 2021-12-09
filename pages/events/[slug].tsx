@@ -6,6 +6,8 @@ import { IJeju43Fields } from "../../@types/generated/contentful"
 import { ParsedUrlQuery } from "querystring"
 import Layout from "../../components/Layout"
 import Header from "../../components/Header"
+import { BackButton } from "../../components/Buttons"
+import styles from "../../styles/EventPage.module.scss"
 
 interface IParams extends ParsedUrlQuery {
   slug: string
@@ -47,26 +49,38 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export default function EventStory({ jeju43Event }: IJeju43Fields) {
-  // const {  } =
-
+  const { event, korTitle, story, eventImage, actors } = jeju43Event.fields
+  console.log(eventImage)
   return (
-    <Layout title={`${jeju43Event.fields.event}  | Jeju 4.3 Incident Website`}>
+    <Layout title={`${event} | Jeju 4.3 Incident Website`}>
       <Head>
         <meta
           name='keywords'
-          content={`Jeju 4.3 Incident, Jeju 4.3 Massacre, Jeju 4.3 Uprising, Jeju 4.3, Jeju history, $`}
+          content={`Jeju 4.3 Incident, Jeju 4.3 Massacre, Jeju 4.3 Uprising, Jeju 4.3, Jeju history, ${event}`}
         />
         <meta
           name='descriptions'
-          content={`Learn more about the history of the indcident that occurred during the Jeju 4.3 Incident.`}
+          content={`Learn more about the history of the indcident that occurred during the Jeju 4.3 Incident. Read about the ${event} incident.`}
         />
       </Head>
-      <Header
-        engTitle={`${jeju43Event.fields.event}`}
-        korTitle={`${jeju43Event.fields.korTitle}`}
-      />
-      <div>{jeju43Event.fields.event}</div>
-      <div>{documentToReactComponents(jeju43Event.fields.story)}</div>
+      <Header engTitle={`${event}`} korTitle={`${korTitle}`} />
+      <div
+        className={styles.eventWrapper}
+        style={{ backgroundImage: `url(${eventImage.fields.file.url})` }}
+      >
+        <div className={styles.eventCard}>
+          <BackButton />
+          <div className={styles.eventInfo}>
+            <h1 className={styles.eventName}>{event}</h1>
+            <h3>Actors Involved</h3>
+            <div>{documentToReactComponents(actors)}</div>
+            <h3>Story</h3>
+            <div className={styles.eventStory}>
+              {documentToReactComponents(story)}
+            </div>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }

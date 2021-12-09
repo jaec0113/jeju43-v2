@@ -1,0 +1,48 @@
+$primary: rgb(7, 87, 7);
+$secondary: #222222;
+$highlight: rgb(253, 253, 86);
+$light: rgb(245, 245, 245);
+
+.eventWrapper {
+  width: 100vw;
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.eventCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.eventInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90vw;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: .25rem;
+  color: $light;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.eventName {
+  text-align: center;
+}
+
+.eventStory > p {
+  line-height: 1.25rem;
+  margin: 1rem auto;
+}
+
+.eventStory > hr {
+  margin: 2rem auto;
+}
+
+.eventStory a {
+  color: $highlight;
+}

@@ -8,6 +8,11 @@
   margin: 0;
 }
 
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
 body,
 nav,
 h3,

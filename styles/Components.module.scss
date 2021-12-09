@@ -1,6 +1,7 @@
 $primary: rgb(7, 87, 7);
 $secondary: #222222;
 $highlight: rgb(253, 253, 86);
+$light: rgb(245, 245, 245);
 
 // Buttons
 .navButton {
@@ -20,18 +21,35 @@ $highlight: rgb(253, 253, 86);
   z-index: 100;
 }
 
+.backButton {
+  background-color: $highlight;
+  border: 2px solid $light;
+  border-radius: .25rem;
+  color: $secondary;
+  font-family:'Noto Serif KR', serif;
+  height: 3rem;
+  margin: 2rem;
+  width: 5rem;
+}
+
+.backButton:hover {
+  border: 2px solid $secondary;
+  background-color: $primary;
+  color: $light;
+}
+
 // Navbar
 .nav {
-  background: $secondary;
-  padding: 0;
-  margin: 0;
-  list-style: none;
   position: fixed;
   flex-direction: column;
+  background: $secondary;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   height: 100vh;
   width: 50vw;
-  transition: transform 1000ms ease-in-out;
   z-index: 50;
+  transition: transform 1000ms ease-in-out; 
 }
 
 .navItems {
@@ -44,19 +62,22 @@ $highlight: rgb(253, 253, 86);
 }
 
 .navItems a {
-  color: white;
+  color: $light;
   font-weight: 100;
   text-decoration: none;
 }
 
 //Header
 .header {
-    font-family: 'Nanum Brush Script', cursive;
-    font-size: clamp(2rem, 5vw, 3rem);
-    background-color: $primary;
-    padding: 2rem;
-    text-align: center;
-  }
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: clamp(2rem, 5vw, 2.25rem);
+  background-color: $primary;
+  color: $light;
+  max-height: 30vh;
+  padding: 2rem;
+  text-align: center;
+  width: 100vw;
+}
 
 //Event Card
 .cardWrapper {
@@ -74,14 +95,14 @@ $highlight: rgb(253, 253, 86);
   font-size: clamp(1.15rem, 5vw, 1.25rem);
   font-weight: 100;
   margin: 1rem;
-  color: white;
+  color: $light;
   text-align: center;
 }
 
 .eventInfo {
   font-size: clamp(.75rem, 5vw, 1rem);
   font-weight: 100;
-  color: white;
+  color: $light;
   padding: 1rem;
 }
 
