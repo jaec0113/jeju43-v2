@@ -49,8 +49,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export default function EventStory({ jeju43Event }: IJeju43Fields) {
-  const { event, korTitle, story, eventImage, actors } = jeju43Event.fields
-  console.log(eventImage)
+  const {
+    event,
+    korTitle,
+    date,
+    region,
+    story,
+    eventImage,
+    actors,
+    imageCredit,
+  } = jeju43Event.fields
+
   return (
     <Layout title={`${event} | Jeju 4.3 Incident Website`}>
       <Head>
@@ -72,12 +81,19 @@ export default function EventStory({ jeju43Event }: IJeju43Fields) {
           <BackButton />
           <div className={styles.eventInfo}>
             <h1 className={styles.eventName}>{event}</h1>
+            <p className={styles.eventDate}>
+              {date}, {region}
+            </p>
             <h3>Actors Involved</h3>
-            <div>{documentToReactComponents(actors)}</div>
+            <div className={styles.eventActors}>
+              {documentToReactComponents(actors)}
+            </div>
             <h3>Story</h3>
             <div className={styles.eventStory}>
               {documentToReactComponents(story)}
             </div>
+            <h3>Image Credit</h3>
+            <p>{imageCredit}</p>
           </div>
         </div>
       </div>

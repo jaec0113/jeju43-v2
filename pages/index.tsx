@@ -35,11 +35,15 @@ export default function Index({ jeju43Events }: any) {
         <meta name='descriptions' content='Jeju 4.3 Incident Timeline' />
       </Head>
       <Header />
-      <div className={styles.eventList}>
-        {jeju43Events.map((jeju43Event: IJeju43Fields) => (
-          <EventCard key={uuidv4()} jeju43Event={jeju43Event} />
-        ))}
-      </div>
+      <main>
+        <div className={styles.centerContainer}>
+          <div className={styles.eventList}>
+            {jeju43Events.map((jeju43Event: IJeju43Fields) => (
+              <EventCard key={uuidv4()} jeju43Event={jeju43Event} />
+            ))}
+          </div>
+        </div>
+      </main>
     </Layout>
   )
 }

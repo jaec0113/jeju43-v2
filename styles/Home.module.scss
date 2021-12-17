@@ -1,12 +1,18 @@
-.eventList {
-  display: grid;
-  grid-template-columns: 40vw;
-  grid-row-gap: 1rem;
-  justify-content: space-evenly;
+.centerContainer {
+  padding: 0 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: url('/drawing-bg.png');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
-  width: 100%;
+}
+
+.eventList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

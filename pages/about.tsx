@@ -55,23 +55,19 @@ export default function about() {
             <p>
               This site uses the official name for the 제주4.3사건 (Jeju Sa.Sam
               sageon in Korean) which is the {`'`}Jeju April 3rd Incident{`'`}.
-              Other names that are used include {`'`}The Jeju 4.3 Massacre{`'`},{" "}
+              Other names that are used include {`'`}The Jeju 4.3 Massacre{`'`},
               {`'`}The Jeju 4.3 Uprising{`'`}, and
-              {`'`}The Jeju 4.3 Rebellion{`'`}. It is a personal opinion, but I
-              (Tedd Chee) believe all four of these names to be lacking in one
-              way or the other. However, the name {`'`}Incident{`'`}
-              avoids the potential political baggage that the other names carry,
-              and as such it was decided to use that name.
+              {`'`}The Jeju 4.3 Rebellion{`'`}.
             </p>
           </div>
           <div className={styles.pageSection}>
             <h2>Using this Website</h2>
             <p>
-              From the homepage click on a region to view events that occurred
-              during the Jeju 4.3 Incident in that region. Click on a 4.3 Marker
-              to view details about that particular event. Use the navigation
-              panel (click on the camellia flower) to navigate between the
-              pages.
+              Scroll down the main page to see events that occurred during the
+              Jeju April 3rd Incident. Click on the {`'`}Read More{`'`} button
+              to learn more about the event. Click on the {`'`}More Info
+              {`'`} link in the menu to read some more context and observations
+              related to the Jeju 4.3 Incident.
             </p>
           </div>
           <div className={styles.pageSection}>

@@ -1,7 +1,7 @@
 import Layout from "../components/Layout"
 import Head from "next/head"
 import Link from "next/link"
-import styles from "../styles/Pages.module.css"
+import styles from "../styles/Pages.module.scss"
 import {
   FaEnvelope,
   FaInstagramSquare,
@@ -60,8 +60,8 @@ export default function contact() {
             </p>
             <p>
               <FaTwitter />{" "}
-              <Link href='https://twitter.com/coffeeaje'>
-                <a className={styles.links}>@coffeeaje</a>
+              <Link href='https://twitter.com/jaec0113'>
+                <a className={styles.links}>@jaec0113</a>
               </Link>
             </p>
             <p>
@@ -107,7 +107,7 @@ export default function contact() {
               <span>
                 A site (not currently being updated) that has some information
                 about Jeju 4.3 as well as more recent information about legal
-                happenings related to 4.3
+                happenings related to 4.3.
               </span>
             </p>
             <p>

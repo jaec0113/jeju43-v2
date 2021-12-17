@@ -1,7 +1,7 @@
 $primary: rgb(7, 87, 7);
 $secondary: #222222;
 $highlight: rgb(253, 253, 86);
-$light: rgb(245, 245, 245);
+$light: rgb(230, 230, 230);
 
 .eventWrapper {
   width: 100vw;
@@ -34,9 +34,27 @@ $light: rgb(245, 245, 245);
   text-align: center;
 }
 
+.eventDate {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.eventCard h3 {
+  font-size: 1.25rem;
+  margin: .5em 0;
+}
+
+.eventActors > ul {
+  margin-left: 1.5rem;
+}
+
 .eventStory > p {
-  line-height: 1.25rem;
-  margin: 1rem auto;
+  line-height: 1.5rem;
+  margin: .5em auto;
+}
+
+.eventStory > ul {
+  margin-left: 1.5rem;
 }
 
 .eventStory > hr {
