@@ -33,6 +33,12 @@ export default function Navbar() {
           <Link href='/'>
             <a>Home</a>
           </Link>
+          <Link href='/tldr'>
+            <a>Jeju 4.3 tl;dr</a>
+          </Link>
+          <Link href='/more'>
+            <a>Learn More</a>
+          </Link>
           <Link href='/about'>
             <a>About</a>
           </Link>
