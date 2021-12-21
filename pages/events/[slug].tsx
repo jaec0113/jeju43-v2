@@ -1,5 +1,4 @@
 import { GetStaticPaths, GetStaticProps } from "next"
-import Head from "next/head"
 import { createClient } from "contentful"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { IJeju43Fields } from "../../@types/generated/contentful"
@@ -61,17 +60,11 @@ export default function EventStory({ jeju43Event }: IJeju43Fields) {
   } = jeju43Event.fields
 
   return (
-    <Layout title={`${event} | Jeju 4.3 Incident Website`}>
-      <Head>
-        <meta
-          name='keywords'
-          content={`Jeju 4.3 Incident, Jeju 4.3 Massacre, Jeju 4.3 Uprising, Jeju 4.3, Jeju history, ${event}`}
-        />
-        <meta
-          name='descriptions'
-          content={`Learn more about the history of the indcident that occurred during the Jeju 4.3 Incident. Read about the ${event} incident.`}
-        />
-      </Head>
+    <Layout
+      title={`${event} | Jeju 4.3 Incident Website`}
+      keywords={`Jeju 4.3 Incident, Jeju 4.3 Massacre, Jeju 4.3 Uprising, Jeju 4.3, Jeju history, ${event}`}
+      description={`Learn more about the history of the incidents that occurred during the Jeju 4.3 Incident. Read about the ${event} incident.`}
+    >
       <Header engTitle={`${event}`} korTitle={`${korTitle}`} />
       <div
         className={styles.eventWrapper}

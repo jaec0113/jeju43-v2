@@ -1,5 +1,4 @@
 import Layout from "../components/Layout"
-import Head from "next/head"
 import Link from "next/link"
 import styles from "../styles/Pages.module.scss"
 import {
@@ -12,17 +11,11 @@ import {
 
 export default function contact() {
   return (
-    <Layout title='Contact | Jeju 4.3 Incident Website'>
-      <Head>
-        <meta
-          name='keywords'
-          content='Jeju 4.3, Jeju 4.3 Incident, Jeju 4.3 Massacre, Jeju 4.3 Uprising, Jeju history, April 3, Jeju April 3, contact'
-        />
-        <meta
-          name='descriptions'
-          content='Find contact information for the creator of the Jeju 4.3 Incident website as well as a handful of other links to learn more.'
-        />
-      </Head>
+    <Layout
+      title='Contact | Jeju 4.3 Incident Website'
+      keywords='Jeju 4.3, Jeju 4.3 Incident, Jeju 4.3 Massacre, Jeju 4.3 Uprising, Jeju history, April 3, Jeju April 3, contact'
+      description='Find contact information for the creator of the Jeju 4.3 Incident website as well as a handful of other links to learn more.'
+    >
       <div className={styles.wrapper}>
         <div className={styles.sidePageMenu}>
           <p className={styles.pageMenuLink}>Site Designer Contact</p>

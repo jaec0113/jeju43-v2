@@ -1,5 +1,4 @@
 import { GetStaticProps } from "next"
-import Head from "next/head"
 import { createClient } from "contentful"
 import { IJeju43Fields, IJeju43 } from "../@types/generated/contentful"
 import { v4 as uuidv4 } from "uuid"
@@ -28,12 +27,11 @@ export const getStaticProps: GetStaticProps = async () => {
 
 export default function Index({ jeju43Events }: any) {
   return (
-    <Layout>
-      <Head>
-        <title>Jeju 4.3 Incident Timeline</title>
-        <meta name='keywords' content='Jeju, 4.3, Incident, Timeline' />
-        <meta name='descriptions' content='Jeju 4.3 Incident Timeline' />
-      </Head>
+    <Layout
+      title='Jeju 4.3 Incident Timeline'
+      keywords='Jeju 4.3, Jeju 4.3 Incident, Jeju 4.3 Massacre, Jeju 4.3 Uprising, Jeju history, April 3, Jeju April 3, Jeju 4.3 Incident Timeline, Jeju 4.3 Timeline'
+      description='See a timeline of events that occurred leading up to the Jeju 4.3 Incident and during the Jeju 4.3 Incident.'
+    >
       <Header />
       <main>
         <div className={styles.centerContainer}>

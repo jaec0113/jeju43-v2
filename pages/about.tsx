@@ -1,21 +1,14 @@
 import Link from "next/link"
-import Head from "next/head"
 import Layout from "../components/Layout"
 import styles from "../styles/Pages.module.scss"
 
 export default function about() {
   return (
-    <Layout title='About | Jeju 4.3 Incident Website'>
-      <Head>
-        <meta
-          name='keywords'
-          content='Jeju 4.3, Jeju 4.3 Incident, Jeju 4.3 Massacre, Jeju 4.3 Uprising, Jeju history, April 3, Jeju April 3, about'
-        />
-        <meta
-          name='descriptions'
-          content='Learn more about the creation of this website and the reasons that motivated it. Find out other places where information can be found related to the Jeju 4.3 Incident.'
-        />
-      </Head>
+    <Layout
+      title='About | Jeju 4.3 Incident Website'
+      keywords='Jeju 4.3, Jeju 4.3 Incident, Jeju 4.3 Massacre, Jeju 4.3 Uprising, Jeju history, April 3, Jeju April 3, about'
+      description='Learn more about the creation of this website and the reasons that motivated it. Find out other places where information can be found related to the Jeju 4.3 Incident.'
+    >
       <div className={styles.wrapper}>
         <div className={styles.sidePageMenu}>
           <p className={styles.pageMenuLink}>About</p>
