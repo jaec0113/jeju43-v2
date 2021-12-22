@@ -9,6 +9,10 @@ export default function More() {
       description='Learn more about the Jeju 4.3 Incident'
     >
       <div className={styles.wrapper}>
+        <header className={styles.pageHeader}>
+          <h1>More About Jeju 4.3</h1>
+          <h3>제주4.3에 대해 더 배우기</h3>
+        </header>
         <div className={styles.sidePageMenu}>
           <p className={styles.pageMenuLink}>4.3 Today</p>
           <p className={styles.pageMenuDash}>
@@ -28,9 +32,6 @@ export default function More() {
           </p>
         </div>
         <div className={styles.pageInfo}>
-          <h1 className={styles.pageHeader}>
-            More About the Jeju 4.3 Incident
-          </h1>
           <p>
             Please note, information on this page are the opinions of the site
             creator and are based on what is currently known.

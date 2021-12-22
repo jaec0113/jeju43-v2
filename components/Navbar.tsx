@@ -40,7 +40,7 @@ export default function Navbar() {
             <a>Learn More</a>
           </Link>
           <Link href='/about'>
-            <a>About</a>
+            <a>About the Site</a>
           </Link>
           <Link href='/contact'>
             <a>Contact</a>

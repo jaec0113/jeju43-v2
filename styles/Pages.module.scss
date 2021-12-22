@@ -1,21 +1,32 @@
+$primary: rgb(7, 87, 7);
+$light: rgb(245, 245, 245);
+
 .wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 15em 1fr;
+  grid-template-rows: 10em 1fr;
+  grid-template-areas:
+    "pageHeader pageHeader"
+    "sidebar main";
 }
 
+// Page Header styles
+.pageHeader {
+  grid-area: pageHeader;
+  background-color: $primary;
+  text-align: center;
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: clamp(2rem, 5vw, 2.25rem);
+  color: $light;
+}
+
+// Sidebar styles
 .sidePageMenu {
-  background-color: #276C00;
+  grid-area: sidebar;
+  background-color: $primary;
   color: white;
-  height: 100vh;
-  width: 25vw;
-  top: 0px;
-  left: 0;
-  position: fixed;
   overflow-x: hidden;
   text-align: center;
-}
-
-.sidePageMenu p:first-child {
-  margin-top: 100px;
 }
 
 .pageMenuLink {
@@ -29,47 +40,33 @@
   font-weight: 100;
 }
 
+// Main styles
 .pageInfo {
-  display: flex;
-  flex-direction: column;
-  margin-left: 30%;
-  width: 65%;
+  grid-area: main;
 }
 
-.pageHeader {
-  font-size: 1.5rem;
-  margin: 0.5em auto;
+.disclaimer {
+  font-size: 0.9rem;
+  font-weight: 100;
+  margin: 1em;
   text-align: center;
 }
 
 .pageSection {
-  margin: 1rem 0;
+  margin: 1rem;
 }
 
 .pageSection p {
-  line-height: 1.25em;
+  line-height: 1.5em;
   margin: 1em auto;
 }
 
 .links {
-  color: #276C00;
+  color: $primary;
   text-decoration: none;
 }
 
+// Media queries
 @media screen and (max-width: 600px) {
-  .pageHeader {
-    font-size: 1.25rem;
-  }
-  .pageSection h2 {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-  .pageMenuLink {
-    font-size: 1rem;
-  }
-  .pageSection p {
-    font-size: .9rem;
-    line-height: 1.5rem;
-    text-align: justify;
-  }
+ 
 }
