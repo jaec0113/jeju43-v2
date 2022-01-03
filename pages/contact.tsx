@@ -7,6 +7,7 @@ import {
   FaMousePointer,
   FaCar,
 } from "react-icons/fa"
+import { GoTopButton } from "../components/Buttons"
 
 export default function contact() {
   return (
@@ -21,29 +22,48 @@ export default function contact() {
           <h3>연락</h3>
         </header>
         <div className={styles.sidePageMenu}>
-          <p className={styles.pageMenuLink}>Site Designer Contact</p>
+          <p className={styles.pageMenuLink}>
+            <a href='#siteContact'>Site Designer Contact</a>
+          </p>
           <p className={styles.pageMenuDash}>
             | <br /> | <br /> | <br /> | <br />
           </p>
-          <p className={styles.pageMenuLink}> Recommended Social Media</p>
+          <p className={styles.pageMenuLink}>
+            <a href='#socialMedia'>Recommended Social Media</a>
+          </p>
           <p className={styles.pageMenuDash}>
             | <br /> | <br /> | <br /> | <br />
           </p>
-          <p className={styles.pageMenuLink}>Jeju 4.3 Foundation</p>
+          <p className={styles.pageMenuLink}>
+            <a href='#jeju43Foundation'>Jeju 4.3 Foundation</a>
+          </p>
           <p className={styles.pageMenuDash}>
             | <br /> | <br /> | <br /> | <br />
           </p>
-          <p className={styles.pageMenuLink}>Other Links</p>
+          <p className={styles.pageMenuLink}>
+            <a href='#otherLinks'>Other Links</a>
+          </p>
         </div>
-        <div className={styles.pageInfo}>
+        <main className={styles.pageInfo}>
+          <a id='#top'></a>
           <div className={styles.pageSection}>
-            <h2>Website Designer Contact Information</h2>
+            <h2>
+              <a id='siteContact'>Website Designer Contact Information</a>
+            </h2>
             <p>
               If have questions or comments regarding this page please contact
               Tedd Chee below.
             </p>
             <p>
-              <FaEnvelope /> coffeeaje0113@gmail.com
+              <FaEnvelope />{" "}
+              <a
+                href='mailto:coffeeaje0113@gmail.com?subject=Re: Jeju 4.3 Website'
+                target='_blank'
+                rel='noreferrer noopener'
+                className={styles.links}
+              >
+                Email Tedd Chee
+              </a>
             </p>
             <p>
               <FaInstagramSquare />{" "}
@@ -68,11 +88,15 @@ export default function contact() {
             </p>
           </div>
           <div className={styles.pageSection}>
-            <h2>Recommended Jeju 4.3 Social Media</h2>
+            <h2>
+              <a id='socialMedia'>Recommended Jeju 4.3 Social Media</a>
+            </h2>
             <p>Coming Soon</p>
           </div>
           <div className={styles.pageSection}>
-            <h2>Jeju 4.3 Foundation</h2>
+            <h2>
+              <a id='jeju43Foundation'>Jeju 4.3 Foundation</a>
+            </h2>
             <p>You can visit the Jeju 4.3 Foundation{`'`}s website</p>
             <p>
               <FaMousePointer />{" "}
@@ -92,7 +116,11 @@ export default function contact() {
             </p>
           </div>
           <div className={styles.pageSection}>
-            <h2>Other Links for Jeju 4.3 Incident Information</h2>
+            <h2>
+              <a id='otherLinks'>
+                Other Links for Jeju 4.3 Incident Information
+              </a>
+            </h2>
             <p>
               Check these sites for more information about the Jeju 4.3 Incident
             </p>
@@ -120,7 +148,8 @@ export default function contact() {
               </span>
             </p>
           </div>
-        </div>
+          <GoTopButton />
+        </main>
       </div>
     </Layout>
   )

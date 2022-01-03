@@ -23,10 +23,13 @@ $light: rgb(245, 245, 245);
 // Sidebar styles
 .sidePageMenu {
   grid-area: sidebar;
+  position: sticky;
   background-color: $primary;
   color: white;
   overflow-x: hidden;
   text-align: center;
+  height: 100vh;
+  top: 0em;
 }
 
 .pageMenuLink {

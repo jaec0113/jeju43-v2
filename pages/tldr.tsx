@@ -1,5 +1,6 @@
 import Layout from "../components/Layout"
 import styles from "../styles/Pages.module.scss"
+import { GoTopButton } from "../components/Buttons"
 
 export default function tldr() {
   return (
@@ -24,7 +25,8 @@ export default function tldr() {
           </p>
           <p className={styles.pageMenuLink}>What happened after 4.3 ended?</p>
         </div>
-        <div className={styles.pageInfo}>
+        <main className={styles.pageInfo}>
+          <a id='#top'></a>
           <p className={styles.disclaimer}>
             <em>
               It is not recommended to try and understand the Jeju 4.3 Incident
@@ -41,18 +43,21 @@ export default function tldr() {
               torture and harassment by the police (with no repercussions), a
               struggling economy, the re-emergence of pro-Japan policemen and
               officials, the increasing marginalization of local viewpoints in
-              governance as well as the split of the country into North and
-              South Korea nationally.
+              governance as well as national issues such as the split of the
+              country into North and South Korea.
             </p>
           </div>
           <div className={styles.pageSection}>
             <h3>What was Jeju 4.3?</h3>
             <p>
-              On April 3, 1948 armed members of the South Korea Labor Party Jeju
-              branch attacked police stations and right wing militant groups in
-              protest of local issues and national issues (see above). After a
-              few months, the police and army began to ramp up the
-              aggressiveness of the suppression methods used leading to the
+              Following a year of protests, arrests, and torture, on April 3,
+              1948 armed members of the South Korea Labor Party Jeju branch
+              attacked police stations and right wing militant groups due to a
+              number of local and national issues (see above). They believed
+              that there was no other way to send a strong enough message to the
+              government that the situation had become intolerable. After a few
+              months of stalemate fighting, the police and army began to ramp up
+              the aggressiveness of the suppression methods used, leading to the
               deaths of hundreds to thousands of civilians. In the fall/winter
               of 1948 and into early 1949, tens of thousands of Jeju civilians
               were killed in the name of suppressing and ending the (allegedly)
@@ -71,8 +76,8 @@ export default function tldr() {
               the government tried to sweep the Jeju 4.3 Incident {`'`}under the
               rug{`'`}. They were largely successful as a generation of Koreans
               grew up not knowing that such an event happened. In Jeju, the
-              topic became incredibly taboo to speak of and doing brought swift
-              consequences.
+              topic became incredibly taboo to speak of and doing so brought
+              swift consequences.
             </p>
             <p>
               The discovery of Darangshi Cave in 1991/1992 was one of the first
@@ -89,7 +94,8 @@ export default function tldr() {
               courts.
             </p>
           </div>
-        </div>
+          <GoTopButton />
+        </main>
       </div>
     </Layout>
   )

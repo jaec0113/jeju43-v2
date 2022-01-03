@@ -11,4 +11,12 @@ function BackButton() {
   )
 }
 
-export { BackButton }
+function GoTopButton() {
+  return (
+    <button className={styles.goTopButton}>
+      <a href='#Top'>Top</a>
+    </button>
+  )
+}
+
+export { BackButton, GoTopButton }

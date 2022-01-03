@@ -1,5 +1,6 @@
 import Layout from "../components/Layout"
 import styles from "../styles/Pages.module.scss"
+import { GoTopButton } from "../components/Buttons"
 
 export default function More() {
   return (
@@ -14,30 +15,44 @@ export default function More() {
           <h3>제주4.3에 대해 더 배우기</h3>
         </header>
         <div className={styles.sidePageMenu}>
-          <p className={styles.pageMenuLink}>4.3 Today</p>
+          <p className={styles.pageMenuLink}>
+            <a href='#43today'>4.3 Today</a>
+          </p>
           <p className={styles.pageMenuDash}>
             | <br /> | <br /> | <br />
           </p>
-          <p className={styles.pageMenuLink}>Accusations of Communism</p>
+          <p className={styles.pageMenuLink}>
+            <a href='#communism'>Accusations of Communism</a>
+          </p>
           <p className={styles.pageMenuDash}>
             | <br /> | <br /> | <br />
           </p>
-          <p className={styles.pageMenuLink}>US Responsibility</p>
+          <p className={styles.pageMenuLink}>
+            <a href='#usResponsibility'>US Responsibility</a>
+          </p>
           <p className={styles.pageMenuDash}>
             | <br /> | <br /> |<br />
           </p>
-          <p className={styles.pageMenuLink}>Why Learn 4.3?</p>
+          <p className={styles.pageMenuLink}>
+            <a href='#learn43'>Why Learn 4.3?</a>
+          </p>
           <p className={styles.pageMenuDash}>
-            | <br /> | <br /> | <br />
+            | <br /> | <br /> |<br />
+          </p>
+          <p className={styles.pageMenuLink}>
+            <a href='#currentEvents'>Current Events</a>
           </p>
         </div>
-        <div className={styles.pageInfo}>
-          <p>
+        <main className={styles.pageInfo}>
+          <a id='#top'></a>
+          <p className={styles.disclaimer}>
             Please note, information on this page are the opinions of the site
             creator and are based on what is currently known.
           </p>
           <div className={styles.pageSection}>
-            <h3>How is the Jeju 4.3 Incident viewed today?</h3>
+            <h3>
+              <a id='43today'>How is the Jeju 4.3 Incident viewed today?</a>
+            </h3>
             <p>
               Compared to even 5-10 years ago, people are much more aware of the
               Jeju 4.3 Incident. However, much about the Jeju 4.3 Incident is
@@ -51,7 +66,9 @@ export default function More() {
             </p>
           </div>
           <div className={styles.pageSection}>
-            <h3>What about the accusations of communism?</h3>
+            <h3>
+              <a id='communism'>What about the accusations of communism?</a>
+            </h3>
             <p>
               My personal standpoint is somewhere in between the views out
               there. You still have plenty of people (usually conservative
@@ -63,16 +80,16 @@ export default function More() {
               older Jeju residents) who will claim that there were zero
               communists in Jeju at the time and certainly not in the resistance
               group. For what it is worth, the documents and reports produced
-              officially by the government seem to take the line that there
-              while there were communist tinges in the group (IE Kim Dalsam),
-              there is little evidence to suppor the idea that the movement was
-              a communist plot to unify the country under a communist regime and
+              officially by the government seem to take the line that while
+              there were communist tinges in the group (IE Kim Dalsam), there is
+              little evidence to support the idea that the movement was a
+              communist plot to unify the country under a communist regime and
               that the majority of the victims had little or no interest in
               communism.
             </p>
             <p>
-              I tend to agree with that interpretation and believe that while
-              the research clearly shows that there were people within the
+              I tend to agree with that interpretation, and believe that the
+              research clearly shows that there were people within the
               resistance that supported the ideas of communism and favored a
               unified Korea under communist rule. However, I think the research
               also shows that there were significant grievances the Jeju people
@@ -87,8 +104,8 @@ export default function More() {
             <p>
               Even if one reads through the events on this site and elsewhere
               and still feels uncomfortable with the potential communist
-              elements with the armed resistance{`'`}s leadership, I believe it
-              is still important to look at the police and military{`'`}s
+              elements within the armed resistance{`'`}s leadership, I believe
+              it is still important to look at the police and military{`'`}s
               actions with regards to the resistance and the broader Jeju
               population. The armed resistance at its peak likely never numbered
               more than several hundred members (maybe 400 or so). Additionally
@@ -99,7 +116,11 @@ export default function More() {
             </p>
           </div>
           <div className={styles.pageSection}>
-            <h3>What about the US and their responsibility?</h3>
+            <h3>
+              <a id='usResponsibility'>
+                What about the US and their responsibility?
+              </a>
+            </h3>
             <p>
               This is a topic that has seemingly grown in voice over the recent
               years (usually among those more on the left of the political
@@ -138,53 +159,58 @@ export default function More() {
               course, a different issue. At a company, does the CEO bare
               responsibility for the misdeeds of middle management? When the
               misdeed is as big as the Jeju 4.3 Incident and when there is
-              enough circumstantial evidence as there is, I believe the answer
-              is probably {`"`}yes{`"`}. Given the level of action taken and the
-              fact that none of it was done secretly or even slightly
-              discretely, there is virtually no chance that USAMGIK did not know
-              what the police or army were doing.
+              enough circumstantial evidence as there is to suggest that the CEO
+              knows what middle management is doing, I believe the answer is
+              probably {`"`}yes{`"`}. Apologies for the slightly clunky analogy,
+              but it should serve the purpose. Given the level of action taken
+              by Korean police and army, and the fact that none of it was done
+              secretly or even slightly discretely, there is virtually no chance
+              that USAMGIK did not know what they were doing, and the US does
+              bear some level of responsibility.
             </p>
           </div>
           <div className={styles.pageSection}>
             <h3>
-              Why should I know about 4.3? What should I take from learning
-              about it?
+              <a id='learn43'>
+                Why should I know about 4.3? What should I take from learning
+                about it?
+              </a>
             </h3>
             <p>
               When talking about 4.3 - especially to younger students - this is
               always a difficult question to answer. Why teach young Koreans
               about the horrors that their own government inflicted upon their
-              ancestors?Knowing how their grandparents or fellow countrymen were
-              tortured and killed for little or no reason, what should they do
-              with that information?
+              ancestors? What should they do with the information they learn
+              about Jeju 4.3?
             </p>
-            <p>Again, personally I take three levels to this idea.</p>
+            <p>Personally I take three levels to this idea.</p>
             <p>
-              The first is simply to know what happened. To know what the police
-              did. To know how the people suffered. To know when and where it
-              happened. If no one knows what happened, then did it happen? That
-              seemed to be the stance and hope of the South Korean government
-              for so long. Never speak of it and it will be forgotten as if it
-              never happened. As such, the minimum is know about the history so
-              it does not disappear.
+              The first is simply to <b>know what happened</b>. To know what the
+              police did. To know how the people suffered. To know when and
+              where it happened. If no one knows what happened, then did it
+              happen? That seemed to be the stance and hope of the South Korean
+              government for so long. Never speak of it and it will be forgotten
+              as if it never happened. As such, the minimum is know about the
+              history so it does not disappear.
             </p>
             <p>
-              The second is to understand why it happened. To understand the
-              circumstances that allowed such a tragic and terrible happening to
-              occur. To understand how politicians or people in leadership
-              positions may manipulate information or emotions to get the result
-              they want. To understand the potential warning signs when people
-              start to {`'`}other
+              The second is to understand <b>why it happened</b>. To understand
+              the circumstances that allowed such a tragic and terrible
+              happening to occur. To understand how politicians or people in
+              leadership positions may manipulate information or emotions to get
+              the result they want. To understand the potential warning signs
+              when people start to {`'`}other
               {`'`} people. To understand the importance of media and a free and
               honest press.
             </p>
             <p>
-              The third level is to understand how 4.3 affected the Jeju people
-              going forward, how it still impacts people today, how to take what
-              one learned in the second level and apply it to politics today. To
-              see how people fought to clear their names of false charges. To
-              see how politicians today may use similar tactics to achieve
-              similar effects.
+              The third level is to understand{" "}
+              <b>how 4.3 affected the Jeju people going forward</b>, how it
+              still impacts people today, how to take what one learned in the
+              second level and apply it to politics today. To see how people
+              fought to clear their names of false charges. To see how
+              politicians today may use similar tactics to achieve similar
+              effects.
             </p>
             <p>
               How much should people learn? How much should one teach about 4.3?
@@ -200,7 +226,14 @@ export default function More() {
               (for lack of a better word) battle.{" "}
             </p>
           </div>
-        </div>
+          <div className={styles.pageSection}>
+            <h3>
+              <a id='currentEvents'>Current Jeju 4.3 Events</a>
+            </h3>
+            <p>In development</p>
+          </div>
+          <GoTopButton />
+        </main>
       </div>
     </Layout>
   )

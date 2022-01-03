@@ -1,5 +1,6 @@
 import Head from "next/head"
 import Navbar from "./Navbar"
+import Footer from "./Footer"
 
 interface ILayout {
   title: string
@@ -26,6 +27,7 @@ export default function Layout({
       </Head>
       <Navbar />
       <div>{children}</div>
+      <Footer />
     </>
   )
 }

@@ -23,7 +23,7 @@ $light: rgb(230, 230, 230);
   flex-direction: column;
   justify-content: center;
   width: 90vw;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   border-radius: .25rem;
   color: $light;
   margin: 0 auto;
@@ -40,7 +40,7 @@ $light: rgb(230, 230, 230);
 }
 
 .eventCard h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin: .5em 0;
 }
 
@@ -49,7 +49,8 @@ $light: rgb(230, 230, 230);
 }
 
 .eventStory > p {
-  line-height: 1.5rem;
+  font-size: 1.15rem;
+  line-height: 1.75rem;
   margin: .5em auto;
 }
 

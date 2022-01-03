@@ -1,6 +1,6 @@
-$primary: rgb(7, 87, 7);
-$secondary: #222222;
-$highlight: rgb(253, 253, 86);
+$primary: rgba(7, 87, 7, 0.9);
+$secondary: rgb(20,20,20);
+$highlight: rgba(253, 253, 86, 0.9);
 $light: rgb(245, 245, 245);
 
 // Buttons
@@ -23,6 +23,7 @@ $light: rgb(245, 245, 245);
 
 .backButton {
   background-color: $highlight;
+  backdrop-filter: blur(30px);
   border: 2px solid $light;
   border-radius: .25rem;
   color: $secondary;
@@ -79,16 +80,28 @@ $light: rgb(245, 245, 245);
   width: 100vw;
 }
 
+//Footer
+.footer {
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 1.25rem;
+  background-color: $primary;
+  color: $light;
+  width: 100vw;
+  padding: 4rem;
+  text-align: center;
+}
+
 //Event Card
 .cardWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-radius: .5rem;
-  background-color: rgba(0,0,0,0.8);
+  border-radius: 10% 20% 20% 10%;
+  background-color: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
   margin: 1rem 0;
-  width: 50vw;
+  width: 80vw;
   max-width: 70%;
 }
 
