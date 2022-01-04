@@ -1,4 +1,5 @@
-$primary: rgb(7, 87, 7);
+$primary: rgba(7, 87, 7, 0.9);
+$highlight: rgba(253, 253, 86, 0.9);
 $light: rgb(245, 245, 245);
 
 .wrapper {
@@ -36,6 +37,12 @@ $light: rgb(245, 245, 245);
   font-size: 1.5rem;
   font-weight: 100;
   margin: 0.75em auto;
+  position: relative;
+}
+
+.pageMenuLink:hover {
+  color: $highlight;
+  transition: color 250ms linear;
 }
 
 .pageMenuDash {
@@ -69,7 +76,22 @@ $light: rgb(245, 245, 245);
   text-decoration: none;
 }
 
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin: 2em auto;
+}
+
 // Media queries
-@media screen and (max-width: 600px) {
- 
+@media screen and (max-width: 768px) {
+  .pageHeader {
+    padding-top: 6rem;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .sidePageMenu {
+    display: none;
+  }
 }

@@ -9,7 +9,9 @@ export default function BlogCard({ jeju43Event }: IJeju43Fields) {
   return (
     <div className={styles.cardWrapper}>
       <div className={styles.cardContent}>
-        <h3 className={styles.eventTitle}>{event}</h3>
+        <Link href={`/events/${slug}`} passHref>
+          <h3 className={styles.eventTitle}>{event}</h3>
+        </Link>
         <Image
           src={`https:${eventImage.fields.file.url}`}
           alt={eventImage.fields.title}

@@ -13,9 +13,9 @@ function BackButton() {
 
 function GoTopButton() {
   return (
-    <button className={styles.goTopButton}>
-      <a href='#Top'>Top</a>
-    </button>
+    <a href='#Top'>
+      <button className={styles.goTopButton}>Top</button>
+    </a>
   )
 }
 

@@ -94,7 +94,9 @@ export default function tldr() {
               courts.
             </p>
           </div>
-          <GoTopButton />
+          <div className={styles.buttonContainer}>
+            <GoTopButton />
+          </div>
         </main>
       </div>
     </Layout>

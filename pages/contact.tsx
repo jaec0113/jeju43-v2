@@ -148,7 +148,9 @@ export default function contact() {
               </span>
             </p>
           </div>
-          <GoTopButton />
+          <div className={styles.buttonContainer}>
+            <GoTopButton />
+          </div>
         </main>
       </div>
     </Layout>

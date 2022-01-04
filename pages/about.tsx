@@ -164,7 +164,9 @@ export default function about() {
               </a>
             </p>
           </div>
-          <GoTopButton />
+          <div className={styles.buttonContainer}>
+            <GoTopButton />
+          </div>
         </main>
       </div>
     </Layout>

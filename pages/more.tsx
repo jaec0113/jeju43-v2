@@ -232,7 +232,9 @@ export default function More() {
             </h3>
             <p>In development</p>
           </div>
-          <GoTopButton />
+          <div className={styles.buttonContainer}>
+            <GoTopButton />
+          </div>
         </main>
       </div>
     </Layout>
